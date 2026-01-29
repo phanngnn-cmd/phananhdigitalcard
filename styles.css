@@ -118,10 +118,10 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 25%;
-    /* Focus on the upper part (face) */
-    transform: scale(1.35);
-    /* Zoom in to crop mainly the face */
+    object-position: center 35%;
+    /* Moved down to hide top background */
+    transform: scale(1.6);
+    /* Increased zoom to fill circle with face */
     border-radius: 50%;
     border: 3px solid var(--bg-color);
     /* Cutout effect */
