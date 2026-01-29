@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phan Anh Nguyen | Digital Business Card</title>
+    <meta name="description" content="Connect with Phan Anh Nguyen - Innovation, Technology, and Entrepreneurship.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="background-canvas">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <main class="container">
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="profile-container">
+                <div class="profile-img-wrapper">
+                    <img src="assets/profile.jpg" alt="Phan Anh Nguyen" class="profile-img">
+                </div>
+                <div class="status-badge">
+                    <span class="pulse-dot"></span> Open to Connect
+                </div>
+            </div>
+
+            <h1 class="name">Phan Anh Nguyen</h1>
+            <p class="tagline">Innovating at the intersection of <span class="highlight">Business</span> & <span
+                    class="highlight">Technology</span>.</p>
+            <p class="bio">Building the future of digital experiences. Forbes 30 Under 30 Aspirant.</p>
+        </header>
+
+        <!-- Link Stack (Linktree Style) -->
+        <div class="link-stack">
+
+            <!-- Loudio - Featured -->
+            <a href="https://loudio.vn" target="_blank" class="card card-wide featured-card">
+                <div class="card-icon"><i class="fas fa-music"></i></div>
+                <div class="card-content">
+                    <h3>Loudio.vn</h3>
+                    <p>Founder & CEO</p>
+                </div>
+                <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/phanngn/" target="_blank" class="card card-wide linkedin-card">
+                <div class="card-icon"><i class="fab fa-linkedin-in"></i></div>
+                <div class="card-content">
+                    <h3>LinkedIn</h3>
+                    <p>Connect professionally</p>
+                </div>
+                <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+            </a>
+
+            <!-- Email -->
+            <div class="card card-wide email-card" onclick="copyEmail()">
+                <div class="card-icon"><i class="fas fa-envelope"></i></div>
+                <div class="card-content">
+                    <h3>Email Me</h3>
+                    <p id="email-text">phananh.nguyen@loudio.vn</p>
+                </div>
+                <div class="copy-feedback">Copied!</div>
+            </div>
+
+            <!-- Save Contact -->
+            <button class="card card-wide contact-card" onclick="downloadVCard()">
+                <div class="card-content centered">
+                    <h3>Save Contact Info</h3>
+                </div>
+                <i class="fas fa-download"></i>
+            </button>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Phan Anh Nguyen. Designed with <i class="fas fa-heart"></i></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
