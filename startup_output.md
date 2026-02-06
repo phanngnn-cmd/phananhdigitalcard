@@ -2,7 +2,7 @@
 
 ## 1. Product Management ([/pm])
 
-- **Mission**: Create a world-class digital presence that slays (Technogeek at the intersection of Memes & Machines).
+- **Mission**: Create a world-class digital presence that slays (Orchestrator at the intersection of Music & Machines).
 - **Goal**: Revert to the "works on my machine" bio because humor > serious suits.
 - **P0**: Replace all corporate-speak with high-tier Gen Z jokes and memes.
 
