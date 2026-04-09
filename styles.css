@@ -50,6 +50,33 @@ body {
         radial-gradient(circle at 50% 50%, rgba(5, 5, 25, 1), #020205);
 }
 
+.background-canvas::before {
+    content: "";
+    position: absolute;
+    inset: -20%;
+    background:
+        repeating-linear-gradient(to bottom,
+            rgba(0, 243, 255, 0.08) 0px,
+            rgba(0, 243, 255, 0.08) 1px,
+            transparent 1px,
+            transparent 7px);
+    opacity: 0.06;
+    pointer-events: none;
+    transform: translate3d(0, 0, 0);
+    will-change: background-position;
+    animation: scanlines 14s linear infinite;
+}
+
+@keyframes scanlines {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 0 220px;
+    }
+}
+
 .grid-overlay {
     position: absolute;
     width: 200%;
@@ -82,6 +109,19 @@ body {
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
     pointer-events: none;
     mix-blend-mode: overlay;
+    transform: translate3d(0, 0, 0) scale(1.05);
+    will-change: transform;
+    animation: noise-drift 10s ease-in-out infinite alternate;
+}
+
+@keyframes noise-drift {
+    from {
+        transform: translate3d(-1%, 0%, 0) scale(1.05);
+    }
+
+    to {
+        transform: translate3d(1%, -1%, 0) scale(1.05);
+    }
 }
 
 /* --- Layout --- */
@@ -566,5 +606,29 @@ footer {
     .status-badge {
         bottom: -12px;
         right: -32px;
+    }
+
+    .background-canvas::before {
+        opacity: 0.04;
+        animation-duration: 20s;
+    }
+
+    .gradient-orb {
+        filter: blur(90px);
+        opacity: 0.12;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero {
+        animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+
+    .grid-overlay,
+    .orb-1,
+    .orb-2,
+    .noise-overlay,
+    .background-canvas::before {
+        animation: none !important;
     }
 }
