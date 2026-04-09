@@ -30,15 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function copyEmail() {
-    const emailText = document.getElementById('email-text').innerText;
-    navigator.clipboard.writeText(emailText).then(() => {
-        const card = document.querySelector('.email-card');
-        card.classList.add('copied');
-
-        setTimeout(() => {
-            card.classList.remove('copied');
-        }, 2000);
-    });
+    // Kept for backward compatibility (older HTML used a copy-to-clipboard email card).
 }
 
 function downloadVCard() {
